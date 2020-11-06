@@ -20,5 +20,8 @@ https://www.ansible.com/ansible-inventory-for-fun-and-profit
 #### How to use multiple files in a roles defaults folder
 https://stackoverflow.com/questions/51818264/how-to-split-an-ansible-roles-defaults-main-yml-file-into-multiple-files
 
-### How to use Advanced Terraform loops and filters
+#### How to use Advanced Terraform loops and filters
 https://alexharv074.github.io/2019/06/02/adventures-in-the-terraform-dsl-part-iii-iteration-enhancements-in-terraform-0.12.html#for_each-expressions
+
+#### Comprehensive Terraform Guide from Gruntworks
+https://blog.gruntwork.io/a-comprehensive-guide-to-terraform-b3d32832baca
