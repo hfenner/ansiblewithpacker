@@ -1,0 +1,2 @@
+plugin: community.vmware.vmware_vm_inventory
+with_tags: True

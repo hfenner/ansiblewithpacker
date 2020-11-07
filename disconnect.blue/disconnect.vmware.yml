@@ -1,0 +1,5 @@
+plugin: community.vmware.vmware_vm_inventory
+hostname: vsphere.disconnect.blue
+username: administrator@vsphere.disconnect.blue
+password: BadPassword1234$
+with_tags: True

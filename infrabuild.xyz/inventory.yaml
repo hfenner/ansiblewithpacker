@@ -1,0 +1,27 @@
+all:
+  children:
+    build:
+      hosts:
+        localhost:
+          ansible_connection: local
+      vars:
+        config_directory: /build_config
+        artifact_directory: /build_artifact
+        explode_directory: /build_explode
+        vsphere:
+          vcenter_server: vsphere.infrabuild.xyz
+          cluster: Cluster
+          datacenter: Datacenter
+          datastore: datastore1
+          folder: Templates
+          network: VM Network
+          username: administrator@vsphere.infrabuild.xyz
+          password: BadPassword1234$
+          esxi_hostname: esxi03.infrabuild.xyz
+        env:
+          VMWARE_USER: "{{ vsphere.username }}"
+          VMWARE_PASSWORD: "{{ vsphere.password }}"
+          RHSM_PASSWORD: "{{ lookup('env', 'RHSM_PASSWORD') }}"
+          PACKER_CACHE_DIR: "{{ artifact_directory }}"
+          PACKER_LOG: 1
+          PACKER_LOG_PATH: "{{ artifact_directory }}/packerlog.txt"
