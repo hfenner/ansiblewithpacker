@@ -3,3 +3,6 @@ hostname: vsphere.disconnect.blue
 username: administrator@vsphere.disconnect.blue
 password: BadPassword1234$
 with_tags: True
+keyed_groups:
+- key: summary.runtime.powerState 
+  separator: ''

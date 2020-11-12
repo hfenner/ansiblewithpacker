@@ -14,7 +14,7 @@ all:
           datacenter: Datacenter
           datastore: datastore1
           folder: Templates
-          network: VM Network
+          network: LAN
           username: administrator@vsphere.infrabuild.xyz
           password: BadPassword1234$
           esxi_hostname: esxi03.infrabuild.xyz

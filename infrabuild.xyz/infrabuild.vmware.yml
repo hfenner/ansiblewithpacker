@@ -1,2 +1,5 @@
 plugin: community.vmware.vmware_vm_inventory
+hostname: vsphere.infrabuild.xyz
+username: administrator@vsphere.infrabuild.xyz
+password: BadPassword1234$
 with_tags: True
