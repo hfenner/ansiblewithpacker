@@ -1,0 +1,29 @@
+---
+- hosts: build
+
+  tasks:
+  - debug:
+      msg: "{{ vsphere }}"
+
+  - name: Deploy OVF Templates
+    community.vmware.vmware_deploy_ovf:
+      folder: "/{{ vsphere.datacenter }}/vm/{{ vsphere.folder }}"
+      hostname: "{{ vsphere.vcenter_server }}"
+      datacenter: "{{ vsphere.datacenter }}"
+      username: "{{ vsphere.username }}"
+      password: "{{ vsphere.password }}"
+      datastore: "{{ vsphere.datastore }}"
+      name: "{{ item }}"
+      networks: "{u'VM Network':u'{{ vsphere.network }}'}"
+      validate_certs: false
+      power_on: no
+      ovf: "/build_artifact/{{ item }}-latest.ova"
+    loop:
+    - centos7
+    - centos8
+    - rhel7
+    - rhel8
+    - esxi
+    - kali
+    - pfsense
+    - vyos
